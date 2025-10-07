@@ -67,8 +67,25 @@ using TestConsoleApp.Classes;
 //var testArray2 = new int[] { 9, 3, 9, 3, 9, 7, 9};
 //Console.WriteLine("Lonely int: " + LonelyIntArray.GetLonelyIntArray(testArray2));
 
-var firstPosition = 56;
-var secondPosition = 1000000000;
-var jumpDistance = 14;
+//var firstPosition = 56;
+//var secondPosition = 1000000000;
+//var jumpDistance = 14;
 
-Console.WriteLine(FrogJump.GetFrogJump(firstPosition, secondPosition, jumpDistance));
+//Console.WriteLine(FrogJump.GetFrogJump(firstPosition, secondPosition, jumpDistance));
+
+
+
+
+//var testArray = new int[] {0,0,1,1,2,2,3,3,4,5,5,6,6,6,4,12,14,14,16,16,111,111,8293814,12,1244};
+//var testArray2 = new int[] { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22};
+//var testArray3 = new int[] { 2,4  };
+//int[] emptyArray = [];
+
+//Console.WriteLine(MissingNumber.GetMissingNumber(testArray3));
+
+var testArray = new int[] { 100,119,117,282,324,414,686,1000,2134,2119,1708 };
+// [23171, 21011, 21123, 21366, 21013, 21367]
+var testArray2 = new int[] { 23171, 21011, 21123, 21366, 21013, 21367 };
+int[] emptyArray = [];
+
+Console.WriteLine(MaxProfit.GetMaxProfit(testArray2));
