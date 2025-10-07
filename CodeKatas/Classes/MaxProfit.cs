@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CodeKatas.Classes
@@ -37,11 +38,12 @@ namespace CodeKatas.Classes
                             if (isProfit)
                             {
                                 var profit = sellDay - buyDay;
-                                batchProfits.Add(profit);
-                            }
-                            else
-                            {
-                                batchProfits.Add(0);
+                                var maxProfitSoFar = batchProfits.Any() ? batchProfits.Max() : 0;
+
+                                if (profit > maxProfitSoFar)
+                                {
+                                    batchProfits.Add(profit);
+                                }    
                             }
                         }
                     }
