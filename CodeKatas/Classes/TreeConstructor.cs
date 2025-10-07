@@ -31,14 +31,6 @@ namespace TestConsoleApp.Classes
             }
 
             return "true";
-
-            //public static string GetTreeConstructor(string[] strArr)
-            //{
-            //    var children = strArr.ToList().Select(i => i.Split(',')[0].Replace("(", string.Empty)).ToList();
-            //    var parents = strArr.ToList().Select(i => i.Split(',')[1].Replace(")", string.Empty)).ToList();
-            //    return children.Distinct().Count() == strArr.Count() &&
-            //          !parents.GroupBy(p => p).Where(g => g.Count() > 2).Any() ? "true" : "false";
-            //}
         }
     }
 }

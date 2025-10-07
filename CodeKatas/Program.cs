@@ -1,4 +1,5 @@
-﻿using TestConsoleApp;
+﻿using CodeKatas.Classes;
+using TestConsoleApp;
 using TestConsoleApp.Classes;
 
 //Console.WriteLine(FirstFactorial.GetFirstFactorial(4));
@@ -65,3 +66,9 @@ using TestConsoleApp.Classes;
 //var testArray = new int[] {0,0,1,1,2,2,3,3,4,5,5,6,6,6,4,12,14,14,16,16,111,111,8293814,12,1244};
 //var testArray2 = new int[] { 9, 3, 9, 3, 9, 7, 9};
 //Console.WriteLine("Lonely int: " + LonelyIntArray.GetLonelyIntArray(testArray2));
+
+var firstPosition = 56;
+var secondPosition = 1000000000;
+var jumpDistance = 14;
+
+Console.WriteLine(FrogJump.GetFrogJump(firstPosition, secondPosition, jumpDistance));
