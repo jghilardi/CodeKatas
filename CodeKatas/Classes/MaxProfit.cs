@@ -9,53 +9,23 @@ namespace CodeKatas.Classes
 {
     internal class MaxProfit
     {
-        public static int GetMaxProfit(int[] A)
+        public static int GetMaxProfit(int[] inputArray)
         {
-            var response = 0;
-
-            if (A.Length > 0)
+            if (inputArray.Length == 0)
             {
-                var batchSize = 10000;
-                var batchCount = A.Length < batchSize ? 1 : A.Length / batchSize;
-                var batchStartPosition = 0;
-
-                var highestProfitPerBatch = new List<int>();
-
-                for (int i = 0; i < batchCount; i++) // batch count
-                {
-                    var batchProfits = new List<int>();
-
-                    for (var x = batchStartPosition; x < A.Length; x++) // buy day
-                    {
-                        var buyDay = A[x];
-                        var startPosition = x + 1;
-
-                        for (var y = startPosition; y < A.Length; y++) // sell day
-                        {
-                            var sellDay = A[y];
-                            var isProfit = buyDay < sellDay && buyDay != sellDay;
-
-                            if (isProfit)
-                            {
-                                var profit = sellDay - buyDay;
-                                var maxProfitSoFar = batchProfits.Any() ? batchProfits.Max() : 0;
-
-                                if (profit > maxProfitSoFar)
-                                {
-                                    batchProfits.Add(profit);
-                                }    
-                            }
-                        }
-                    }
-
-                    highestProfitPerBatch.Add(batchProfits.Max());
-                    batchStartPosition += batchSize;
-                }
-
-                response = highestProfitPerBatch.Max();
+                return 0;
             }
 
-            return response;
+            var maxProfit = 0;
+            var minValue = inputArray[0];
+
+            for (int i = 1; i < inputArray.Length; i++)
+            {
+                minValue = Math.Min(minValue, inputArray[i]);
+                maxProfit = Math.Max(maxProfit, inputArray[i] - minValue);
+            }
+
+            return maxProfit;
         }
     }
 }
