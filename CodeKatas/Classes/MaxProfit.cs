@@ -11,18 +11,17 @@ namespace CodeKatas.Classes
     {
         public static int GetMaxProfit(int[] inputArray)
         {
-            if (inputArray.Length == 0)
-            {
-                return 0;
-            }
-
             var maxProfit = 0;
-            var minValue = inputArray[0];
 
-            for (int i = 1; i < inputArray.Length; i++)
+            if (inputArray.Length > 0)
             {
-                minValue = Math.Min(minValue, inputArray[i]);
-                maxProfit = Math.Max(maxProfit, inputArray[i] - minValue);
+                var minValue = inputArray[0];
+
+                for (int i = 1; i < inputArray.Length; i++)
+                {
+                    minValue = Math.Min(minValue, inputArray[i]);
+                    maxProfit = Math.Max(maxProfit, inputArray[i] - minValue);
+                } 
             }
 
             return maxProfit;
