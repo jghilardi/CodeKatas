@@ -102,5 +102,6 @@ var testString = "And now here is my secret";
 var cutoff = 15;
 var test2 = "super dog";
 var test3 = "There is an animal with four legs";
+var test4 = "my best was not enough eh?";
 
-Console.WriteLine(MessageSplit.GetMessageSplit(test2, 4));
+Console.WriteLine(MessageSplit.GetMessageSplit(test4, 2));
